@@ -7,9 +7,9 @@
 <!ELEMENT desvan ANY>
 <!ELEMENT dormitorio (#PCDATA | cama | mesa)*>
 <!ELEMENT cama EMPTY>
-<!ELEMENT mesa ANY>
-<!ELEMENT mama ANY>
-<!ELEMENT papa ANY>
+<!ELEMENT mesa EMPTY>
+<!ELEMENT mama (#PCDATA)>
+<!ELEMENT papa (#PCDATA)>
 <!ELEMENT hermano (#PCDATA)>
 <!ENTITY % atributo "nombre ID #REQUIRED añoNacimiento CDATA #IMPLIED familia CDATA #FIXED 'Perez'">
 <!ATTLIST mama %atributo;>

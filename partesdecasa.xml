@@ -8,7 +8,8 @@
         <jardin personaLocalizada="María">
         </jardin>
         <cochera></cochera>
-        <dormitorio personaLocalizada="Juan Mario"> Sus componentes son <cama></cama>
+        <dormitorio personaLocalizada="Juan Mario"> Sus componentes son
+            <cama></cama>
             <cama></cama>
             <mesa></mesa>
         </dormitorio>

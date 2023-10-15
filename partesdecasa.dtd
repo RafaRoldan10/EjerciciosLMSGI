@@ -1,0 +1,22 @@
+<!ELEMENT casa (partes, personas)>
+<!ELEMENT partes (cocina, jardin, (cochera | desvan), dormitorio*)>
+<!ELEMENT personas (mama, papa, hermano+, mascota?)>
+<!ELEMENT cocina ANY>
+<!ELEMENT jardin ANY>
+<!ELEMENT cochera ANY>
+<!ELEMENT desvan ANY>
+<!ELEMENT dormitorio (#PCDATA | cama | mesa)*>
+<!ELEMENT cama EMPTY>
+<!ELEMENT mesa ANY>
+<!ELEMENT mama ANY>
+<!ELEMENT papa ANY>
+<!ELEMENT hermano (#PCDATA)>
+<!ENTITY % atributo "nombre ID #REQUIRED añoNacimiento CDATA #IMPLIED familia CDATA #FIXED 'Perez'">
+<!ATTLIST mama %atributo;>
+<!ATTLIST papa %atributo;>
+<!ATTLIST hermano %atributo;>
+<!ATTLIST cocina colorPared (blanco | azul | gris) "blanco"
+                 personaLocalizada IDREF #IMPLIED>
+<!ATTLIST jardin personaLocalizada IDREF #IMPLIED>
+<!ATTLIST dormitorio personaLocalizada IDREFS #IMPLIED>
+<!ENTITY edad "su edad es">

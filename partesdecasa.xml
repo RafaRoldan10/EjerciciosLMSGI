@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE casa SYSTEM "partesdecasa.dtd">
+
+<casa>
+    <partes>
+        <cocina colorPared="blanco" personaLocalizada="Manuel">
+        </cocina>
+        <jardin personaLocalizada="María">
+        </jardin>
+        <cochera></cochera>
+        <dormitorio personaLocalizada="Juan Mario"> Sus componentes son <cama></cama>
+            <cama></cama>
+            <mesa></mesa>
+        </dormitorio>
+    </partes>
+      <personas>
+        <mama nombre="María" añoNacimiento="1972" familia="Perez">
+            &edad;51
+        </mama>
+        <papa nombre="Manuel" añoNacimiento="1971" familia="Perez">
+            &edad;52
+        </papa>
+        <hermano nombre="Juan" añoNacimiento="2001" familia="Perez"> &edad;22 </hermano>
+        <hermano nombre="Mario" añoNacimiento="2004" familia="Perez"> &edad; 19 </hermano>
+     </personas>
+
+</casa>

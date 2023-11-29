@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <title>Superh&eacute;roes</title>
+        <style type="text/css">
+            table {
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+            }
+            tr th{
+              background-color: #319c03;
+              color: white;
+              text-align: center;
+              font-style: italic;
+            }
+            table tr td {
+                padding: 10px;
+                border: #b6b6b6 2px solid;
+                background-color: pink;
+            }
+            table tr td:hover{
+                color: blue;
+                background-color: pink;
+                
+            }
+            img{
+                width: 25%;
+                text-align: center;
+            }
+            img:hover{
+                transform: scale(1.3);
+                transition: 1s;
+            }
+            .primeracolumna{
+                color:#eb4034;
+                background-color: rgb(171, 156, 79);
+                font-size: 20px;
+            }
+            .cuartacolumna{
+                text-align: center;
+            }
+
+            p{
+               font-size: 18px;
+               font-weight: bold;
+
+            }
+            a {
+            width: 10px;
+            height: 20px;
+            background-color: rgb(31, 189, 68);
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            
+            }
+            .tercercolumna{
+               background-color: #e6ace3 ;
+            }
+            .batman{
+                background-color: pink;
+                text-align: center;
+            }
+            .wonder{
+                background-color: pink;
+                text-align: center;
+            }
+            .superman{
+                background-color: pink;
+                text-align: center;
+            }
+            .flash{
+                background-color: pink;
+                text-align: center;
+            }
+            
+            .batman:hover{
+                background-color: gray;
+            }
+            .superman:hover{
+                background-color: aqua;
+            }
+            .wonder:hover{
+                background-color: #db122c;
+            }
+            .flash:hover{
+                background-color: #dbc940;
+
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <p>Superh&eacute;roes de DC</p>
+        <table>
+            <tr>
+                <th>Superh&eacute;roe</th>
+                <th colspan="2">Poderes</th>
+                <th>Imagen</th>
+                <th>Biograf&iacute;a</th>
+            </tr>
+            <tr>
+                <td rowspan = 2 class=primeracolumna>Batman</td>
+                <td colspan="2">Inteligencia, habilidades de detective, habilidades marciales</td>
+                <td rowspan  = 2 class="batman"><img src =https://thumb.pccomponentes.com/w-300-300/articles/1072/10722926/119-neca-batman-1989-batman-michael-keaton-figura-45-cm.jpg alt="batman"></img></td>
+                <td rowspan="2" ><a href=https://es.wikipedia.org/wiki/Batman>M&aacute;s sobre Batman</a></td>
+            </tr>
+            <tr>
+                <td colspan="2">Alias: El caballero oscuro</td>
+                
+            </tr>
+            <tr>
+                <td rowspan = 2 class=primeracolumna>Superman</td>
+                <td rowspan=2 colspan="2">Vuelo, super fuerza, visi&oacute;n de rayos X</td>
+                <td rowspan  = 2 class="superman"><img src =https://thumb.pccomponentes.com/w-300-300/articles/1074/10743423/1140-noble-collection-figura-flexible-superman.jpg alt="superman"></img></td>
+                <td rowspan = 2 ><a href=https://es.wikipedia.org/wiki/Superman>M&aacute;s sobre Superman</a></td>
+            </tr>
+            <tr>
+
+            </tr>
+            <tr>
+                <td rowspan = 2 class=primeracolumna>Wonder Woman</td>
+                <td rowspan=2 colspan="2">Fuerza sobrehumana, habilidades de lucha, lazos de la verdad</td>
+                <td rowspan  = 2 class="wonder"><img src =https://thumb.pccomponentes.com/w-300-300/articles/57/573885/1550-erik-maxi-poster-wonder-woman-espada-915x61cm.jpg alt= "Wonder Woman"></img></td>
+                <td rowspan = 2 ><a href=https://es.wikipedia.org/wiki/Mujer_Maravilla>M&aacute;s sobre Wonder Woman</a></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+                <td rowspan = 2 class=primeracolumna>Flash</td>
+                <td colspan="2">Velocidad sobrehumana, curvatura del tiempo</td>
+                <td rowspan  = 2 class="flash"><img src =https://thumb.pccomponentes.com/w-300-300/articles/1074/10743639/1100-noble-collection-dc-comics-figura-flexible-flash-18cm.jpg alt= "Flash"></img></td>
+                <td rowspan = 2 ><a href=https://es.wikipedia.org/wiki/The_Flash_(pel%C3%ADcula)>M&aacute;s sobre Flash</a></td>
+            </tr>
+            <tr>
+                <td colspan="2">Miembro de la liga de la justicia</td>
+            </tr>
+        </table>
+    </body>
+</html>

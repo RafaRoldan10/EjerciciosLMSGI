@@ -1,0 +1,18 @@
+<!ELEMENT biblioteca (genero,premios)>
+<!ELEMENT genero (novelaTerror, novelaAventura, (novelaComedia | poesia))>
+<!ELEMENT premios (#PCDATA | premio)*>
+<!ELEMENT novelaTerror (libro+,temaDelMes?)>
+<!ELEMENT novelaAventura (libro+,temaDelMes?)>
+<!ELEMENT novelaComedia (libro+, temaDelMes?)>
+<!ELEMENT poesia (libro+, temaDelMes?)>
+<!ELEMENT libro ANY>
+<!ELEMENT temaDelMes EMPTY>
+<!ELEMENT premio (#PCDATA)>
+<!ATTLIST biblioteca nombre CDATA #FIXED 'Los Cofres'
+                     horario (mañana | tarde | noche) 'mañana'>
+<!ENTITY % atributo "nombre ID #REQUIRED autor CDATA #IMPLIED">
+<!ATTLIST libro %atributo;>
+<!ATTLIST premio libroGanador IDREF #IMPLIED
+                 mencionesEspeciales IDREFS #IMPLIED
+                 premioRecibido CDATA #IMPLIED>
+<!ENTITY lectores "recomendado para los lectores">

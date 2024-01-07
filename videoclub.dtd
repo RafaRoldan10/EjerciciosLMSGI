@@ -1,0 +1,23 @@
+<!ELEMENT videoclub (peliculas,ofertas)>
+<!ELEMENT peliculas (tipos)>
+<!ELEMENT tipos (terror, comedia, (aventura | anime))>
+<!ELEMENT ofertas (#PCDATA | ofertaMensual | ofertaSemanal)*>
+<!ELEMENT ofertaMensual (#PCDATA)>
+<!ELEMENT ofertaSemanal (#PCDATA)>
+<!ELEMENT terror (peliculaMasAlquiladaTerror,otraPelicula+, temaDelMes?)>
+<!ELEMENT comedia (peliculaMasAlquiladaComedia,otraPelicula+, temaDelMes?)>
+<!ELEMENT aventura (peliculaMasAlquiladaAventura,otraPelicula+, temaDelMes?)>
+<!ELEMENT temaDelMes EMPTY>
+<!ELEMENT peliculaMasAlquiladaTerror EMPTY>
+<!ELEMENT peliculaMasAlquiladaComedia EMPTY>
+<!ELEMENT peliculaMasAlquiladaAventura EMPTY>
+<!ELEMENT otraPelicula (#PCDATA)>
+<!ENTITY % atributo "nombre ID #REQUIRED lanzamiento CDATA #IMPLIED opinion CDATA #FIXED 'buena'">
+<!ATTLIST peliculaMasAlquiladaTerror %atributo;>
+<!ATTLIST peliculaMasAlquiladaComedia %atributo;>
+<!ATTLIST peliculaMasAlquiladaAventura %atributo;>
+<!ATTLIST ofertaMensual codigo IDREF #REQUIRED
+                         disponible (si | no ) "si">
+<!ATTLIST ofertaSemanal codigos IDREFS #REQUIRED
+                         disponible (si | no ) "si">
+<!ENTITY intro "La peli es:">

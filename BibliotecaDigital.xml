@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "BibliotecaDigital.dtd.">
+
+<biblioteca nombre="Los Cofres" horario="mañana">
+    <genero>
+        <novelaTerror>
+            <libro nombre = "Trágica_Noche" autor = "Mario Cárdenas"/>
+            <libro nombre = "Luces" autor = "Ana Rosa"/>
+        </novelaTerror>
+        <novelaAventura>
+            <libro nombre = "Tormenta" autor = "Rocio Valenzuela"/>
+            <libro nombre = "A_por_ello" autor = "Jose Bayuela"/>
+            <temaDelMes/>
+        </novelaAventura>
+        <poesia>
+            <libro nombre="Flores" autor= "Blanca Rodriguez"/>
+        </poesia>
+    </genero>
+    <premios>
+        Los premios son:
+        <premio libroGanador= "Flores" premioRecibido="Mejor Ilustración">
+            Un gran libro &lectores;
+        </premio>
+        <premio mencionesEspeciales= "Tormenta Luces">
+            Dos grandes éxitos &lectores;
+        </premio>
+    </premios>
+</biblioteca>

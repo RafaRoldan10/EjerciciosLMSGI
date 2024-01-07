@@ -1,3 +1,28 @@
-<videoclubs>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videoclub SYSTEM "videoclub.dtd">
 
-</videoclubs>
+<videoclub>
+    <peliculas>
+        <tipos>
+            <terror>
+                <peliculaMasAlquiladaTerror nombre="ExpedienteWarren" lanzamiento="2013" opinion="buena"/>
+                <otraPelicula> &intro; Anabelle</otraPelicula>
+                <temaDelMes/>
+            </terror>
+            <comedia>
+                <peliculaMasAlquiladaComedia nombre="OchoApellidosVascos" lanzamiento="2014" opinion="buena"/>
+                <otraPelicula> &intro; OchoApellidosCatalanes</otraPelicula>
+            </comedia>
+            <aventura>
+                <peliculaMasAlquiladaAventura nombre="FastAndFurious8" lanzamiento="2017" opinion="buena"/>
+                <otraPelicula> &intro; Indiana Jones</otraPelicula>
+            </aventura>
+        </tipos>
+   </peliculas>
+   <ofertas>
+        Ofertas otoño:
+        <ofertaMensual codigo="OchoApellidosVascos" disponible="si">1 peli gratis</ofertaMensual>
+        <ofertaSemanal codigos="ExpedienteWarren  FastAndFurious8" disponible="si" >2 pelis por 1</ofertaSemanal>
+        <ofertaSemanal codigos="FastAndFurious8 ExpedienteWarren" disponible="si">2 pelis por 1</ofertaSemanal>
+   </ofertas>
+</videoclub>

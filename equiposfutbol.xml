@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equiposfutbol xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="equiposfutbol.xsd">
+Los equipos son:
+    <RealMadrid estadio="Bernabeú" fechaFundacion="1902"></RealMadrid>
+    <Barcelona estadio="CampNou" fech></Barcelona>
+</equiposfutbol>

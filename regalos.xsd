@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="tiendas" type="tipoTiendas"/>
+
+<xs:complexType name="tipoTiendas">
+    <xs:sequence>
+        <xs:element name="tienda" maxOccurs="unbounded" type="tipoTienda"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoTienda">
+    <xs:all><!--xs: all nos ayuda a mostrar todos los elementos pero el maximo solo es una vez-->
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="regalos" type="tipoRegalos"/>
+    </xs:all>
+    <xs:attribute name="cif" type="xs:string"/>
+    <xs:attribute name="descuentosAplicables" type="tipoDescuentosAplicables"/>
+</xs:complexType>
+
+<xs:complexType name="tipoRegalos">
+    <xs:sequence><!--xs: sequence nos ayuda a tener varios elementos las veces que queramos-->
+        <xs:element name="regalo" maxOccurs="unbounded" type="tipoRegalo"/>
+        <xs:element name="bombazo" type="tipoBombazo"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoRegalo">
+    <xs:complexContent mixed="true">
+      <xs:extension base="tipoBombazo">
+        <xs:sequence>
+          <xs:element name="marca" type="tipoMarca" />
+        </xs:sequence>
+        <xs:attribute name="precio" type="tipoPrecio"/>
+        <xs:attribute name="iva" type="tipoIVA"/>
+        <xs:attribute name="descuento" type="tipoDescuento"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoIVA">
+    <xs:restriction base="tipoPrecio">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="50" />
+    </xs:restriction>  
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoPrecio">
+    <xs:restriction base="xs:float">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="10000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+<xs:complexType name="tipoMarca">
+    <xs:choice><!--xs:choice nos ayuda a eligir un elemento posible entre una lista de ellos con un maximo de unbounded y un minimo de 0-->
+        <xs:element name="mattel" type="tipoVacio"/>
+        <xs:element name="giochiPreziosi" type="tipoVacio"/>
+    </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="tipoVacio"/>
+
+<xs:complexType name="tipoBombazo" mixed="true">
+    <xs:sequence>
+        <xs:element name="url" type="tipoURL"/>
+    </xs:sequence>
+    <xs:attribute name="codigo" type="tipoCodigo"></xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="tipoURL">
+    <xs:simpleContent>
+      <xs:extension base="textoValidado">
+        <xs:attribute name="tipo" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+
+  <xs:simpleType name="textoValidado">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(http|https)://.+[.](es|com)/.+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+<xs:simpleType name="tipoCodigo">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="([0-9]{3}|([A-Z]|[a-z]){3}){1,}"></xs:pattern>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tipoDescuentosAplicables">
+    <xs:list itemType="tipoDescuento"></xs:list>
+</xs:simpleType>
+
+<xs:simpleType name="tipoDescuento">
+    <xs:union memberTypes="descuentos1015 descuentos2025"/>
+</xs:simpleType>
+
+<xs:simpleType name="descuentos2025">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="20%"></xs:enumeration>
+        <xs:enumeration value="25%"></xs:enumeration>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="descuentos1015">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="10%"></xs:enumeration>
+        <xs:enumeration value="15%"></xs:enumeration>
+    </xs:restriction>
+</xs:simpleType>
+
+
+</xs:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="equiposfutbol" type="tipoequiposfutbol" />
+
+  <xs:complexType name="tipoequiposfutbol" mixed ="true">
+    <xs:all>
+        <xs:element name="RealMadrid"></xs:element>
+        <xs:element name= "Barcelona"></xs:element>
+    </xs:all>
+    <xs:attribute name="estadio" type="xs:string" />
+    <xs:attribute name="fechaFundacion" type="xs:integer" />
+  </xs:complexType>
+</xs:schema>

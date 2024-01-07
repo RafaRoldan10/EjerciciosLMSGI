@@ -1,0 +1,224 @@
+body{
+     background-color:  #a9ff91;
+     padding: 0px;
+     margin: 0px;
+     font-family: 'Merriweather Sans', sans-serif;
+     font-family: 'Oswald', sans-serif;
+
+}
+.principal{
+    display: flex;
+    
+    background-image: url(img/descarga.jpg);
+}
+.marca{
+    background-color: red;
+    color : white;
+    font-size: 40px;
+    width: 90%;
+    text-align: center;
+    background-image: url(img/campo.jpg);
+}
+
+.centrar{
+    text-align: center;
+}
+.btn-group .button {
+  background-color: white; 
+  border: 1px solid green;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100vw;
+}
+a{
+  text-decoration: none;
+}
+.marca > a{
+  color: white;
+}
+.divcuestionario{
+  background-color: green;
+  font-size: 40px;
+  text-align: center;
+  align-content: center;
+}
+
+.divcuestionario > button{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: green;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  align-content: center;
+  line-height: 70px;
+}
+ img{
+    width: 10%;
+  }
+  img:hover{
+     opacity: 40%;
+     transform: scale(1.1);
+     background-color: white;
+     color: #fff;
+  }
+
+  h1{
+    text-align: center;
+  }
+  .flex-container {
+    display: flex;
+    height: 300px;
+    justify-content: left;
+    padding: 10px;
+    
+  }
+  .divderecha{
+    justify-content: right;
+    background-color:#a9ff91;;
+    height: 80vh;
+    text-align: left;
+    flex-direction: column;
+  }
+  .flex-container > div{
+    width: 50vw;
+    height: 90vh;
+    text-align: center;
+    display: inline;
+    font-size: 40px;
+  }
+  .contenedor{
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+ }
+ .contenedor > div{
+  text-align: center;
+  ;
+  font-size: 50px;
+  padding: 10px;
+  text-shadow: 4px 4px 0 rgba(0 , 0 , 0 ,.1);
+ }
+.div1 { background:#DC052D;}
+.div2 { background: #A50044;
+color:#3578c5}
+.div3 { background: #034694;
+color: white}
+.div4 { background:#c22a25;
+color: white}
+.div5 { background: #6CABDD;
+color:wheat}
+.div6 { background:#DC052D;
+color:yellow;}
+.div7 { background:#004170;
+color: wheat;}
+.div8 { background:white;}
+
+.imgchampions{
+  width: 20vw;
+  height: 40vh;
+  align-items: left;
+}
+.divchampions{
+  background-color:#0E1E5B;
+  font-size: 27px;
+  color: red;
+}
+.divvideo{
+   font-size: 20px;
+   padding: 20px;
+  }
+.contenedorequipos{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 90vw;
+  height: 70vh;
+  margin: 60px;
+}
+.divinfo{
+  width: 45vw;
+  background-color: rgb(65, 180, 188);
+  height: 70vh ;
+  font-size: 30px;
+  border: 1px solid #ddd;
+}
+.escudo{
+  width: 45vw;
+  height: 70vh;
+}
+.con-salto {
+  display: block; 
+  margin-bottom: 10px; 
+}
+.tablecontainer{
+   
+  width: 45vw;
+  background-color: rgb(65, 180, 188);
+  height: 70vh ;
+  font-size: 30px;
+}
+table{
+  width: 100%;
+  border: black;
+  height: 70vh;
+  width: 45vw;
+  
+}
+ table tr{
+  border: black;
+  text-align: center;
+  border: 10%;
+  background-color: rgb(155, 138, 104);
+}
+tr td{
+  border: black;
+  background-color: white;
+  text-align: center;
+  border: 10%;
+}
+.a{
+  width: 10vw;
+  height: 10vh;
+}
+.botonmadrid{
+  width: 24.5vw; 
+ }
+ .form{
+  margin: 20px;
+  text-align: center;
+  font-size: 30px;
+ }
+ .filascolor{
+  background-color: #596c79;
+ }
+ .tituloscuestionario{
+  margin: 10px;
+  font-size: 30px;
+ }
+.opciones{
+  margin : 10px;
+}
+.formulario{
+  text-decoration: none;
+  font-size: 15 px;
+  color: white;
+  margin: 60px;
+  padding: 10px;
+}
+.titulo{
+  font-size: 60px;
+  margin: 60px;
+  padding: 10px;
+}

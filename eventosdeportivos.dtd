@@ -1,0 +1,17 @@
+<!ELEMENT pabellon (deporte,torneo*)>
+<!ELEMENT torneo (#PCDATA)>
+<!ELEMENT deporte (badminton, futbol , (baloncesto | tenis))>
+<!ELEMENT badminton (#PCDATA | participante | deporteDelMes)*>
+<!ELEMENT futbol (equipo+,deporteDelMes?)>
+<!ELEMENT baloncesto (equipo+,deporteDelMes?)>
+<!ELEMENT participante (#PCDATA)>
+<!ELEMENT equipo (#PCDATA)>
+<!ELEMENT deporteDelMes EMPTY>
+<!ENTITY % atributo "nombreDelTorneo ID #REQUIRED pista CDATA #IMPLIED ciudadDeLaPista CDATA #FIXED 'Rute'">
+<!ATTLIST badminton %atributo;>
+<!ATTLIST futbol %atributo;>
+<!ATTLIST baloncesto %atributo;>
+<!ENTITY intro "el torneo es en Rute">
+<!ATTLIST torneo deporte IDREF #IMPLIED
+                 estacionCuandoSeJuega (verano | invierno) "verano"
+                 modoEspecial IDREFS #IMPLIED>

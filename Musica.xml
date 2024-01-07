@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE musica SYSTEM "Musica.dtd">
+<musica>
+    <artista nombre= "Manuel_Rodriguez" anioNacimiento = "1980">
+        <cancion nombre = "Solo Tu" tipo ="reggaeton"></cancion>
+        <artistaDelMes/>
+    </artista>
+    <artista nombre= "Manuel_López" anioNacimiento = "1983">
+        <cancion nombre = "Luna Llena" tipo ="pop"></cancion>
+        </artista>
+    <artista nombre= "Sofia_Reina" anioNacimiento = "1989">
+        <cancion nombre = "Jardines" tipo ="pop"></cancion>
+    </artista>
+    <albumes>
+        Los albumes más famosos son:
+        <album nombre="Primer Album " autor = "Manuel_Rodriguez"/>
+        <album nombre="Secretos " autor = "Sofia_Reina"/>
+        <colaboracion nombre= "Verdades" autores="Sofia_Reina Manuel_López"></colaboracion>
+    </albumes>
+    <conciertos artista= "Sofia_Reina" lugar = "Madrid"/>
+</musica>

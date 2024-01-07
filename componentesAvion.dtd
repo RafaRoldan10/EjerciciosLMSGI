@@ -1,0 +1,23 @@
+<!ELEMENT componentes (aviones, componentesEspeciales*)>
+<!ELEMENT aviones (avion+)>
+<!ELEMENT avion (alas,motor,asientos,asientosDeLujo?, (volante | giroscopio))>
+<!ELEMENT componentesEspeciales (#PCDATA | componenteEspecial)*>
+<!ELEMENT alas EMPTY>
+<!ELEMENT motor EMPTY>
+<!ELEMENT asientos EMPTY>
+<!ELEMENT asientosDeLujo EMPTY>
+<!ELEMENT volante (#PCDATA)>
+<!ELEMENT giroscopio (#PCDATA)>
+<!ELEMENT componenteEspecial (#PCDATA)>
+<!ENTITY % atributo " nombre ID  #REQUIRED">
+<!ATTLIST avion %atributo;>
+<!ATTLIST volante %atributo;>
+<!ATTLIST giroscopio %atributo;>
+<!ATTLIST alas tipo CDATA #IMPLIED
+               color ( rojo | azul | blanco) "azul">
+<!ATTLIST componenteEspecial nombre ID #REQUIRED
+                             avionQueLoUsa IDREF #IMPLIED
+                             avionesQueLoUsan IDREFS #IMPLIED>
+<!ATTLIST motor marca CDATA #FIXED "mercedes">
+<!ATTLIST asientos material CDATA #IMPLIED>
+<!ENTITY originalidad "Para dar mayor originalidad">

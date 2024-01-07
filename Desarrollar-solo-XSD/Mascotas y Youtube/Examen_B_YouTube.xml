@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<youtube xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="youtube.xsd">
+	<videos>
+		<video>El de la Cabra que parece que canta <!--contenido mixto--><!--xs:all-->
+			<url>https://www.youtube.com/watch?v=3xQUF696nik</url>
+			<visualizaciones>112000</visualizaciones><!--entre 0 y 1 millon-->
+			<comentarios><!--usar xs:sequence-->
+				<buenos>1200</buenos><!--entre 0 y 200000-->
+				<malos>700</malos>
+			</comentarios>
+			<subscriptores>
+				<subscriptor codigo="15-[AR]-56"><!--contenido validado con patrón-->
+					<fechaSubscripcion dia="12" mes="febrero" anyo="2017"/> <!--vacio--><!--atributo anyo debe de ser una enumeracion del 2015 al 2018-->
+					<comentarios cantidad="12"/><!--vacio-->
+					<correoElectronico completo="rafa@gmail.com">
+						<usuario>rafa</usuario>
+						<servidor><gmail/></servidor><!--xs:choice de perro orca o delfin-->
+					</correoElectronico>
+					<idioma>Chinese</idioma><!--xs:union de los idiomas en inglés y en español-->
+				</subscriptor>
+			</subscriptores>
+		</video>
+	</videos>
+	<publicidad>
+		<anuncio>
+			<empresa>Gilette</empresa>
+			<bannersPorMinuto>40000</bannersPorMinuto>
+		</anuncio>
+		<anuncioPatrocinado patrocinador="Google"><!--anuncio patrocinado es una derivación de anuncio-->
+			<empresa>Casa Tarradellas</empresa>
+			<bannersPorMinuto>15000</bannersPorMinuto>
+			<descuentoYouTube>23%</descuentoYouTube>
+		</anuncioPatrocinado>
+	</publicidad>
+	<idiomasDisponibles>Francés Italiano Alemán Inglés Chinese Korean Japanese</idiomasDisponibles><!--xs:list-->
+</youtube>

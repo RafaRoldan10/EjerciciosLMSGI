@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realMadrid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="RealMadrid.xsd">
+<anioFundacion presidente="Victor Montiel">1902</anioFundacion>
+Sus secciones deportivas son:
+  <futbol anioComienzo="1902">
+   <estadio nombre="Santiago Bernabeú " capacidad="90000"/>
+   <jugadores>
+    Entre los más importantes están:
+    <vinicius DNI="23243598F" posicion="delantero" anioLlegada="2018"></vinicius>
+    <bellingham DNI="23802128L" posicion="centrocampista" anioLlegada="2023"></bellingham>
+    <courtois DNI="73829210S" posicion="portero" anioLlegada="2018"></courtois>
+   </jugadores>
+   <jugadorLeyenda DNI="32846291A" posicion="delantero" anioLlegada="2009" anioSalida="2018">
+       Su nombre es Crisitano Ronaldo
+   </jugadorLeyenda>
+
+  </futbol>
+  <baloncesto anioComienzo="1970">
+    <jugadoresBaloncesto>
+        <llull posicion_dorsal="10"></llull>
+        <tavares posicion_dorsal="pivot" ></tavares>
+    </jugadoresBaloncesto>
+  </baloncesto>
+</realMadrid>

@@ -1,0 +1,16 @@
+<!ELEMENT fruteria (articulos, ofertas?, recetasEspecialesDeLaTienda)>
+<!ELEMENT articulos (articulo+)>
+<!ELEMENT ofertas (#PCDATA | oferta)*>
+<!ELEMENT articulo EMPTY>
+<!ELEMENT oferta ANY>
+<!ELEMENT recetasEspecialesDeLaTienda ((tartaDeZanahoria | tartaDeManzana), tomatesALaPueblerina, potajeDeGarbanzos)>
+<!ELEMENT tartaDeZanahoria EMPTY>
+<!ELEMENT tartaDeManzana EMPTY>
+<!ELEMENT tomatesALaPueblerina EMPTY>
+<!ELEMENT potajeDeGarbanzos EMPTY>
+<!ATTLIST fruteria nombre CDATA #FIXED "Fruteria Los Manzanos">
+<!ENTITY % atributo "nombre ID #REQUIRED tipo ( fruta | legumbre | hortaliza) 'fruta'">
+<!ATTLIST articulo %atributo;>
+<!ENTITY tienda "en Fruteria Los Manzanos">
+<!ATTLIST oferta articulo IDREF #IMPLIED
+                 articulosEspeciales IDREFS #IMPLIED>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crepusculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="crepusculo.xsd">
+  <personajes >
+    Entre los personajes más importantes están
+    <Bella DNI="23122950A" EdadPeliculas="290"></Bella>
+    <Edward DNI ="29301338J" EdadPeliculas="400"></Edward>
+    <Edward DNI = "34526922L" EdadPeliculas="102"></Edward>
+  </personajes>
+  <libros>
+    <lunaNueva añoLanzamiento="2012" nombreAutor="Rolu">Es el primer libro</lunaNueva>
+    <eclipse añoLanzamiento="2014" nombreAutor="Rolu">Es el segundo libro</eclipse>
+    <amanecer añoLanzamiento="2015" nombreAutor="Rolu">Es el tercer libro</amanecer>
+  </libros>
+  <libroMasVendido premioGanado="Nobel">
+    <amanecer añoLanzamiento="2015" nombreAutor="Rolu">
+      <millonesDeVentas España="raf">hola</millonesDeVentas>
+    </amanecer>
+  </libroMasVendido>
+  <peliculas>
+  </peliculas>
+</crepusculo>

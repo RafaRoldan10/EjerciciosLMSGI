@@ -1,0 +1,18 @@
+<!ELEMENT musica (artista+,albumes, (conciertos | festivales))>
+<!ELEMENT artista (cancion*, artistaDelMes?)>
+<!ELEMENT albumes (#PCDATA | album | colaboracion)*>
+<!ELEMENT cancion ANY>
+<!ELEMENT artistaDelMes EMPTY>
+<!ELEMENT album EMPTY>
+<!ELEMENT colaboracion EMPTY>
+<!ELEMENT conciertos EMPTY>
+<!ATTLIST conciertos artista IDREF #REQUIRED
+                     lugar CDATA #FIXED "Madrid">
+<!ATTLIST artista nombre ID #REQUIRED
+                  anioNacimiento CDATA #IMPLIED>
+<!ATTLIST album nombre CDATA #IMPLIED
+                autor IDREF #IMPLIED>
+<!ATTLIST colaboracion nombre CDATA #IMPLIED
+                       autores IDREFS #IMPLIED>
+<!ENTITY % cancion "nombre CDATA #REQUIRED tipo (pop | reggaeton | rock) 'pop'">
+<!ATTLIST cancion %cancion;>

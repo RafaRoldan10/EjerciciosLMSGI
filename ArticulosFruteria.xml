@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fruteria SYSTEM "ArticulosFruteria.dtd">
+
+<fruteria nombre="Fruteria Los Manzanos">
+    <articulos>
+        <articulo nombre= "Zanahorias" tipo="hortaliza"/>
+        <articulo nombre = "Naranjas" tipo="fruta"/>
+        <articulo nombre= "Manzanas" tipo="fruta"/>
+        <articulo nombre = "Tomates" tipo="hortaliza"/>
+        <articulo nombre = "Garbanzos" tipo = "legumbre"/>
+    </articulos>
+    <ofertas>
+       Las ofertas son:
+        <oferta articulo= "Tomates">Consgiue esta oferta &tienda;</oferta>
+        <oferta articulo = "Garbanzos"> Una de las mejores ofertas &tienda; </oferta>
+        <oferta articulosEspeciales= "Manzanas Naranjas">Las mejores frutas &tienda; </oferta>
+    </ofertas>
+    <recetasEspecialesDeLaTienda>
+        <tartaDeZanahoria/>
+        <tomatesALaPueblerina/>
+        <potajeDeGarbanzos/>
+    </recetasEspecialesDeLaTienda>
+
+</fruteria>

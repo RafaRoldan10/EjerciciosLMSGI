@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pabellon SYSTEM "eventosdeportivos.dtd.">
+
+<pabellon>
+    <deporte>
+        <badminton nombreDelTorneo = "Badmintoron" pista= "Interior" ciudadDeLaPista="Rute">
+            Los participantes son:
+            <participante>Carolina</participante>
+            <participante>Dario</participante>
+            <participante>Enrique</participante>
+        </badminton>
+        <futbol nombreDelTorneo = "Furbito" pista= "Exterior" ciudadDeLaPista="Rute">
+            <equipo>Real Madrid</equipo>
+            <equipo>Betis</equipo>
+            <equipo>Barcelona</equipo>
+            <deporteDelMes></deporteDelMes>
+        </futbol>
+        <baloncesto nombreDelTorneo= "Basket" pista= "Interior" ciudadDeLaPista="Rute">
+            <equipo>Estudiantes</equipo>
+            <equipo>Unicaja</equipo>
+            <equipo>Caja Laboral</equipo>
+       </baloncesto>
+    </deporte>
+    <torneo deporte = "Furbito" estacionCuandoSeJuega = "verano">&intro;</torneo>
+    <torneo deporte = "Basket" estacionCuandoSeJuega = "invierno">&intro;</torneo>
+    <torneo deporte = "Badmintoron" estacionCuandoSeJuega = "invierno">&intro;</torneo>
+    <torneo modoEspecial = "Badmintoron Basket" estacionCuandoSeJuega = "invierno">&intro;</torneo>
+</pabellon>

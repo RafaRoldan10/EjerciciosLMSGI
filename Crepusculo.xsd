@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="crepusculo" type="tipoCrepusculo"></xs:element>
+
+ <xs:complexType name="tipoCrepusculo">
+    <xs:all>
+        <xs:element name="personajes" type="tipoPersonajes"></xs:element>
+        <xs:element name= "libros" type= "tipoLibros"></xs:element>
+        <xs:element name="libroMasVendido" type="tipoLibroMasVendido"></xs:element>
+        <xs:element name="peliculas"></xs:element>
+    </xs:all>
+ </xs:complexType>
+ 
+ <xs:complexType name="tipoPersonajes" mixed="true">
+    <xs:sequence>
+        <xs:element name = "Bella" type="tipoBella"></xs:element>
+        <xs:element name = "Edward" type="tipoEdward" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+ </xs:complexType>
+
+ <xs:complexType name="tipoLibros">
+    <xs:all>
+      <xs:element name = "lunaNueva" type="tipoCadaLibro"></xs:element>
+      <xs:element name = "eclipse" type="tipoCadaLibro"></xs:element>
+      <xs:element name = "amanecer" type="tipoCadaLibro"></xs:element>
+    </xs:all>
+</xs:complexType>
+
+<xs:complexType name="tipoLibroMasVendido">
+   <xs:choice>
+    <xs:element name="lunaNueva"></xs:element>
+    <xs:element name="eclipse"></xs:element>
+    <xs:element name="amanecer"></xs:element>
+   </xs:choice>
+   <xs:attribute name="premioGanado">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Nobel"/>
+        <xs:enumeration value="Nacional"/>
+      </xs:restriction>
+    </xs:simpleType>
+   </xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="tipoBella">
+    <xs:attribute name="DNI" type="tipoDNI"></xs:attribute>
+    <xs:attribute name="EdadPeliculas" type="tipoEdadPeliculas"></xs:attribute>
+ </xs:complexType>
+
+ <xs:complexType name="tipoEdward">
+    <xs:attribute name="DNI" type="tipoDNI"></xs:attribute>
+    <xs:attribute name="EdadPeliculas" type="tipoEdadPeliculas"></xs:attribute>
+ </xs:complexType>
+
+ <xs:complexType name="tipoCadaLibro" mixed="true">
+   <xs:attribute name= "añoLanzamiento" type="xs:integer"></xs:attribute>
+   <xs:attribute name= "nombreAutor" type="xs:string"></xs:attribute>
+ </xs:complexType>
+ <xs:simpleType name="tipoDNI">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{8}[A-Z]" />
+    </xs:restriction>  
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoEdadPeliculas">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="100"/>
+      <xs:maxExclusive value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="tipoAmanecer">
+    <xs:complexContent mixed="true">
+      <xs:extension base="tipoCadaLibro">
+        <xs:sequence>
+          <xs:element name="millonesDeVentas" type="millonesDeVentasDerivado"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>  
+
+  <xs:complexType name="millonesDeVentasDerivado">
+    <xs:simpleContent>
+      <xs:extension base="soloNumeros">
+        <xs:attribute name="España" type="xs:integer"></xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="soloNumeros">
+    <xs:restriction base="xs:integer">
+    </xs:restriction>
+  </xs:simpleType>
+
+  
+ 
+</xs:schema>

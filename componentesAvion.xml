@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE componentes SYSTEM "componentesAvion.dtd">
+<componentes>
+    <aviones>
+        <avion nombre = "Turbo" >
+            <alas tipo="triangulares" color="azul"></alas>
+            <motor marca= "mercedes"></motor>
+            <asientos material="algodon"></asientos>
+            <asientosDeLujo/>
+            <volante nombre= "El_Volantazo">El mote del volante</volante>
+        </avion>
+        <avion nombre = "Piculin" >
+            <alas tipo="ovaladas" color="rojo"></alas>
+            <motor marca= "mercedes"></motor>
+            <asientos material="algodon"></asientos>
+            <giroscopio nombre= "Le_Giron">Un gran apodo para un giroscopio</giroscopio>
+        </avion>
+    </aviones>
+    <componentesEspeciales>
+        Estos componentes especiales son para ciertos aviones:
+        <componenteEspecial nombre= "Alas_Dibujadas" avionQueLoUsa="Turbo">&originalidad;</componenteEspecial>
+        <componenteEspecial nombre= "Asientos_Lana" avionQueLoUsa="Piculin">&originalidad;</componenteEspecial>
+        <componenteEspecial nombre= "Asientos_Animales" avionesQueLoUsan ="Turbo Piculin">Asientos para mascotas que sirven en ambos aviones</componenteEspecial>
+    </componentesEspeciales>
+</componentes>

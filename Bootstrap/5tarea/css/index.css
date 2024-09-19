@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(248, 249, 252);
+}
+
+.carro {
+  color: grey;
+}
+
+.texto-verde {
+  color: green;
+  font-weight: bold;
+}
+
+h3 {
+  color: black;
+}
+
+.solo-verde {
+  color: green;
+}
+
+.para-boton {
+  background-color: rgb(11, 94, 215);
+  color: white;
+}
+
+.para-boton:hover {
+  color: white;
+  background-color: rgb(11, 94, 215);
+}
+
+/*# sourceMappingURL=index.css.map */

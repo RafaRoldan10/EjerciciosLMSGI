@@ -1,0 +1,21 @@
+@import 'utiles';
+@mixin color-texto($color,$font-size){
+    color:$color;
+    font-size: $font-size;
+}
+
+.textos-lorem{
+    @include color-texto($color-body, $texto)
+}
+
+.better{
+    @include color-texto($color-texto, $texto)
+}
+
+body{
+    background-color: $color-body;
+    color: $color-texto;
+}
+ .color-boton{
+    background-color: $color-boton;
+ }

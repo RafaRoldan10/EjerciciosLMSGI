@@ -1,0 +1,31 @@
+@import "colors";
+@mixin color-texto($color, $font-size){
+    color:$color;
+    font-size: $font-size;
+}
+
+body{
+    background-color: $color-de-fondo;
+}
+.carro{
+    @include color-texto($carrito-text)
+}
+.texto-verde{
+    color: $color-text;
+    font-weight: bold;
+    
+}
+h3{
+    @include color-texto(black)
+}
+.solo-verde{
+    color: $color-text;
+}
+.para-boton{
+    background-color: $color-boton;
+    @include color-texto(white)
+}
+.para-boton:hover{
+    @include color-texto(white);
+    background-color: $color-boton;
+}
